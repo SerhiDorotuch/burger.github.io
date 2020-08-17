@@ -23,9 +23,15 @@ $('.slider-product ul').slick({
   dots: true,
   responsive:[
       {
-        breakpoint: 500,
+        breakpoint: 1000,
         settings: {
-          dots: false,
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
           arrows: false,
         }
       },
@@ -33,14 +39,12 @@ $('.slider-product ul').slick({
 });
 
 
+
 /*  MENU-MOB
 ------------------------------------------------- */
 var btnBurger = document.querySelectorAll('.btn-burger');
-
 var menuLeft = document.querySelector('.menu-left');
-
 var closeBurger = document.querySelector('.close-burger');
-
 var overlay = document.querySelector('.popup-overlay');
 
 
@@ -56,4 +60,63 @@ closeBurger.onclick = function() {
   	overlay.classList.remove('active');
 };
 
+/*  POPUP
+------------------------------------------------- */
+function popup() {
+    const btn = document.querySelectorAll('.btn-popup');
+    const ovelay = document.querySelector('.popup-overlay');
+    var popup = null;
 
+    for (var i = 0; i < btn.length; i++) {
+        btn[i].addEventListener('click', openPopup);
+    }
+
+    function openPopup(e) {
+        e.preventDefault();
+
+        popup = document.querySelector('.' + this.getAttribute('data-popup'));
+        const close = popup.querySelector('.popup-close');
+
+        close.addEventListener('click', closePopup);
+
+        ovelay.classList.add('active');
+        popup.classList.add('active');
+    }
+
+    function closePopup(e) {
+        e.preventDefault();
+
+        console.log('hi');
+        popup.classList.remove('active');
+        ovelay.classList.remove('active');
+    }
+}
+
+popup();
+
+
+// $(window).resize(function() {
+//     if ($(this).width() < 1000) {
+//         $('.catalog-category ul').slick({
+//             infinite: true,
+//             slidesToShow: 3,
+//             slidesToScroll: 3,
+//             dots: false,
+//             arrows: false,
+//         });
+//     } else {
+//         $('.catalog-category ul').slick('unslick');
+//     }
+// });
+
+// if ($(window).width() < 1000) {
+//     $('.catalog-category ul').slick({
+//         infinite: true,
+//         slidesToShow: 3,
+//         slidesToScroll: 3,
+//         dots: false,
+//         arrows: false,
+//     });
+// } else {
+//     $('.catalog-category ul').slick('unslick');
+// }

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- PAGE-404-->
+<div class="page-404">	
+
+<!-- HEADER -->
+<header class="header">
+	<div class="menu-left">
+		<div class="box-top flex">
+			<i class="close-burger"></i>
+			
+			<a href="#" class="hidden-desktop visible-mobile">
+				<i class="ic-user-white"></i>
+				<span>Войти</span>
+			</a>
+
+			<a href="#" class="hidden-desktop visible-mobile">
+				<i class="ic-location-white"></i>
+				<span>Грозный</span>
+			</a>
+		</div>
+
+		<ul>
+			<li><a href="#" class="hidden-desktop visible-mobile">Меню</a></li>
+			<li><a href="#" class="hidden-desktop visible-mobile">Новинки и акции</a></li>
+			<li><a href="#" class="hidden-desktop visible-mobile">Где нас найти</a></li>
+			<li><a href="#">РоялБургер в России</a></li>
+			<li><a href="#">Работа в РоялБургер</a></li>
+			<li><a href="#">Новости</a></li>
+			<li><a href="#">Сотрудничество</a></li>
+			<li><a href="#">Обратная связь</a></li>
+		</ul>
+
+		<div class="social-box flex">
+			<a href="#" class="ic-inst"></a>
+			<a href="#" class="ic-vk"></a>
+			<a href="#" class="ic-twit"></a>
+			<a href="#" class="ic-fb"></a>
+		</div>
+	</div>
+
+	<div class="center flex">
+		<div class="btn-burger hidden-desktop visible-mobile"></div>
+
+		<div class="left flex">
+			<a href="#" class="ic-logo"></a>
+
+			<a href="#" class="flex hidden-mobile">
+				<i class="ic-location btn-popup" data-popup="popup-map"></i>
+				<span class="c-gray">Грозный</span>
+			</a>
+		</div>
+		
+		<nav class="menu hidden-mobile">
+			<ul>
+				<li><a href="#">Меню</a></li>
+				<li><a href="#">Новинки и акции</a></li>
+				<li><a href="#">Где нас найти</a></li>
+			</ul>
+		</nav>
+
+		<div class="right flex">
+			<a href="#" class="ic-cart" ></a>
+			<a href="#" class="ic-user hidden-mobile"></a>
+			<i class="btn-burger hidden-mobile"></i>
+		</div>
+	</div>
+</header>
+<!-- // HEADER -->
+
+<!-- PAGE-ERROR-->
+<div class="page-error">
+	<div class="center align-center">
+		<div class="img">
+			<img src="img/img-404.jpg" alt="">
+		</div>
+
+		<h1 class="tx-xl tx-center"><span>Упс!</span> Что-то пошло не так :(</h1>
+
+		<p class="c-gray tx-center">Страница которую вы ищите не найдена. Возможно адрес<br> страницы введен неправильно или страница была удалена!</p>
+
+		<div class="flex-center">
+			<a href="#" class="btn">Вернуться на главную</a>
+		</div>
+	</div>
+</div>
+<!-- // PAGE-ERROR-->
+
+
+
+<div class="popup-overlay"></div>
+
+<!-- POPUP-MAP-ADDRESS-->
+<div class="popup main-popup popup-map">
+	<a href="#" class="popup-close"></a>
+
+	<h3 class="popup-title">Укажите адрес на карте</h3>
+
+	<div class="img">
+		<img src="img/map.jpg" alt="">
+	</div>
+	
+	<div class="flex">
+		<a href="#" class="address">улица Коцюбинского, 9А</a>
+		<a href="#" class="btn">Я здесь</a>
+	</div>
+
+	<div class="error">Ошибка определения адреса</div>
+</div>
+<!-- // POPUP-MAP-ADDRESS-->
+
+</div>
+<!-- // PAGE-404-->
+
+<script src="js/jquery3.5.1.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
