@@ -38,7 +38,33 @@ $('.slider-product ul').slick({
     ],
 });
 
-
+$('.slider-kids').slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  dots: false,
+  responsive:[
+      {
+        breakpoint: 1150,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+       {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+        }
+      },
+    ],
+});
 
 /*  MENU-MOB
 ------------------------------------------------- */
@@ -93,6 +119,61 @@ function popup() {
 }
 
 popup();
+
+/*  SELECT
+----------------------------------------------  */
+var select = document.querySelectorAll('.select');
+
+  for (var i = 0; i < select.length; i++) {
+    var view = select[i].querySelector('.view');
+
+    view.onclick = function() {
+      var parent = this.closest('.select'),
+        ul = parent.querySelector('ul'),
+        li = ul.querySelectorAll('li'),
+        view = parent.querySelector('.view'),
+        input = parent.querySelector('input[type="hidden"]');
+        
+      ul.classList.toggle('active');
+      parent.classList.toggle('open');
+
+      for (var j = 0; j < li.length; j++) {
+        li[j].onclick = function() {
+          view.innerHTML = this.innerHTML;
+
+          ul.classList.remove('active');
+          parent.classList.remove('open');
+
+          input.setAttribute('value', this.getAttribute('data-value'));
+        }
+      }
+    }
+  }
+
+  /*  ACCORDEON 
+------------------------------------------------- */
+var dropdownlink = document.querySelectorAll('.dropdownlink');
+
+for (var i = 0; i < dropdownlink.length; i++) {
+  dropdownlink[i].addEventListener('click', function(e) {
+
+  var submenu = this.nextElementSibling;
+  submenuHeight = this.nextElementSibling.clientHeight;
+  var height = submenu.querySelector('.submenuItems .inner').scrollHeight;
+
+  if (submenuHeight == 0) {
+    submenu.style.height = height + 'px';
+    this.classList.add('active');
+    
+  }else {
+    submenu.style.height = 0 + 'px';
+    this.classList.remove('active');
+  }
+});
+}
+
+
+
 
 
 // $(window).resize(function() {
