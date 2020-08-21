@@ -16,7 +16,7 @@ $('.home-slider ul').slick({
     ],
 });
 
-$('.slider-product ul').slick({
+$('.product-slide').slick({
   infinite: true,
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -37,6 +37,41 @@ $('.slider-product ul').slick({
       },
     ],
 });
+
+$('.option-slide').slick({
+  infinite: true,
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  dots: true,
+  responsive:[
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 5,
+        }
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+        }
+      },
+    ],
+});
+
 
 $('.slider-kids').slick({
   infinite: true,
