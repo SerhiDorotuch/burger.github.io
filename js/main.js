@@ -236,9 +236,83 @@ var ac1 = new acordeon({
   dropAll: false,
 });
 
+var ac2 = new acordeon({
+  clasName: '.account-accordeon',
+  dropAll: false,
+});
+
+
+/*  ACCOUNT-ACCORDEON 
+------------------------------------------------- */
+var accountAccordeon = document.querySelectorAll('.account-accordeon .anhor');
+
+
+window.onresize = function() {
+  if( window.innerWidth < 1000 ){
+      for (var i = 0; i < accountAccordeon.length; i++) {
+        accountAccordeon[i].classList.remove('list');
+      }
+  }
+
+  if( window.innerWidth > 1000 ){
+      for (var i = 0; i < accountAccordeon.length; i++) {
+        accountAccordeon[i].classList.add('list');
+      }
+  }
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*  SHOW-MORE 
+------------------------------------------------- */
+// function show() {
+//   var showMore = document.querySelectorAll('.show-more');
+
+//   var count = true;
+
+//   for (var i = 0; i < showMore.length; i++) {
+//     showMore[i].onclick = function() {
+
+//       var prevEl = this.previousElementSibling;
+
+//       var elStaticHeight = this.previousElementSibling.clientHeight;
+
+//       console.log(elStaticHeight);
+
+//       var elHeight = this.previousElementSibling.scrollHeight;
+      
+     
+
+//       if (count) {
+//           prevEl.style.height = elHeight + 'px';
+//           console.log('da');
+//           count = false;
+//       }else {
+//           prevEl.style.height = elStaticHeight + 'px'; 
+//           console.log('no');
+//           count = true;
+//       }
+
+//     }
+//   }
+// }
+
+// show();
+  
 
 
 
