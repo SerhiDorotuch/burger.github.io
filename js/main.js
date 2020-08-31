@@ -242,37 +242,6 @@ var ac2 = new acordeon({
 });
 
 
-/*  ACCOUNT-ACCORDEON 
-------------------------------------------------- */
-var accountAccordeon = document.querySelectorAll('.account-accordeon .anhor');
-
-
-window.onresize = function() {
-  if( window.innerWidth < 1000 ){
-      for (var i = 0; i < accountAccordeon.length; i++) {
-        accountAccordeon[i].classList.remove('list');
-      }
-  }
-
-  if( window.innerWidth > 1000 ){
-      for (var i = 0; i < accountAccordeon.length; i++) {
-        accountAccordeon[i].classList.add('list');
-      }
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
