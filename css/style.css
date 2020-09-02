@@ -596,6 +596,14 @@ input[type="file"] {display: none;}
 }
 .popup-close:hover {background-color: #b3aaaa61;}
 
+.main-popup.box {
+    padding: 32px 32px 40px 32px;
+}
+
+.main-popup.box .popup-title {font-size: 24px;}
+
+.main-popup.box .form-style input {padding: 17px 16px;}
+
 /*  POPUP-MAP
 ------------------------------------------------- */
 .popup-map {
@@ -785,6 +793,83 @@ input[type="file"] {display: none;}
     color: #9D9D9D;
 }
 .popup-kids .text p + p {margin-top: 20px;}
+
+
+/*  POPUP-ADDRESS
+------------------------------------------------- */
+.popup-address .box-input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.popup-address .box-input div {
+    width: 22%;
+    margin: 24px 0;
+}
+
+.popup-address .box-input div:first-child {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.popup-address .box-input div span {
+    display: none;
+    font-size: 14px;
+    color: #9D9D9D;
+    margin-bottom: 4px;
+}
+
+.popup-address .btn {width: 100%;}
+
+
+/*  POPUP-CARD
+------------------------------------------------- */
+.popup-card form input {margin-top: 20px;}
+
+.popup-card form input:nth-child(1) {margin-top: 24px;}
+.popup-card form input:nth-child(3),
+.popup-card form input:nth-child(4) {
+    width: 116px;
+    margin-right: 20px;
+}
+
+.popup-card .info {
+    font-size: 14px;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    left: -10px;
+    
+}
+
+.popup-card form .btn {
+    width: 100%;
+    margin-top: 24px;
+}
+
+
+/*  POPUP-DELET
+------------------------------------------------- */
+
+.popup-delet {
+    max-width: 390px;
+    text-align: center;
+    
+}
+.popup-delet .btn {
+    display: block;
+    width: 100%;
+}
+
+.popup-delet .btn:nth-child(3) {margin: 24px 0 20px 0;}
+
+.popup-delet .btn-inverse {
+    border: 2px solid #D9D9D9;
+    background: #fff;
+    box-shadow: none;
+}
+
 
 
 /*  HEADER

@@ -197,7 +197,7 @@ function acordeon(setting) {
       var height = this.nextElementSibling.scrollHeight;
 
       if (setting.dropAll) {
-        var parent = this.closest('.acordeon');
+        var parent = this.closest(setting.clasName);
         var content = parent.querySelectorAll('.submenuItems');
 
         for (var i = 0; i < click.length; i++) {
