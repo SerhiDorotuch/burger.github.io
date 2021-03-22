@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<div class="wrapper page-home">
+<div class="wrapper page-home page-style">
 	<!-- HEADER -->
 	<header class="header">
 		<div class="head-line">
@@ -24,7 +24,25 @@
 					<ul>
 						<li><a href="#">How it works</a></li>
 						<li><a href="#">Start your journey</a></li>
-						<li><a href="#">Treatments</a></li>
+						<li>
+							<a href="#">Treatments <i class="arr"></i></a>
+							<div class="sub-nav">
+								<ul>
+									<li><a href="#">Anti Aging <i class="arr"></i></a></li>
+									<li><a href="#">Acne <i class="arr"></i></a></li>
+									<li><a href="#">Rosacea <i class="arr"></i></a></li>
+									<li><a href="#">Hyperpigmentation <i class="arr"></i></a></li>
+									<li><a href="#">Melasma <i class="arr"></i></a></li>
+								</ul>
+
+								<div class="nav-info">
+									<img src="img/nav-image.jpg" alt="">
+									<h3>Prescription Rosacea Treatments</h3>
+									<p>Treatment and long term solution to control rosacea made with proven, prescription only ingredients.</p>
+									<a href="#" class="btn-void">Find out more</a>
+								</div>
+							</div>
+						</li>
 						<li><a href="#">Ingredients</a></li>
 						<li><a href="#">Reviews</a></li>
 						<li><a href="#">Blog</a></li>
@@ -225,17 +243,17 @@
 
 			<ul>
 				<li class="animation anim-left">
-					<div class="image"></div>
+					<div class="image step-1"></div>
 					<h4>Step 1</h4>
 					<p>Complete Your Free<br> Consultation</p>
 				</li>
 				<li class="animation anim-top">
-					<div class="image"></div>
+					<div class="image step-2"></div>
 					<h4>Step 2</h4>
 					<p>Order Your Recommended<br> Skincare Treatment</p>
 				</li>
 				<li class="animation anim-right">
-					<div class="image"></div>
+					<div class="image step-3"></div>
 					<h4>Step 3</h4>
 					<p>Receive Your Personalized Treatment By Mail</p>
 				</li>
@@ -258,13 +276,7 @@
 			<div class="reviews-slider">
 				<div class="item">
 					<div class="inner">
-						<div class="stars">
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
-							<span class="active"></span>
-						</div>
+						<div class="stars"></div>
 						<h5>“My go-tos”</h5>
 						<p>The day cream and eye cream have been my go-tos and I can honestly say they are part of one of the most advanced skin care systems out there.</p>
 						<div>—  Tina</div>
@@ -272,13 +284,7 @@
 				</div>
 				<div class="item">
 					<div class="inner">
-						<div class="stars">
-							<span></span>
-							<span></span>
-							<span class="active"></span>
-							<span class="active"></span>
-							<span class="active"></span>
-						</div>
+						<div class="stars"></div>
 						<h5>“Amazing”</h5>
 						<p>My skin was amazing — it felt like it had gone through a transformation after just four weeks!</p>
 						<div>—  Kelly</div>
@@ -286,13 +292,7 @@
 				</div>
 				<div class="item">
 					<div class="inner">
-						<div class="stars">
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
+						<div class="stars"></div>
 						<h5>“I’m hooked”</h5>
 						<p>I've used the day cream for six months. It sits perfectly under my makeup. Other people have commented on my skin and how well I look. When that happens at 48, you listen. I’m hooked!</p>
 						<div>—  Amy</div>
@@ -300,13 +300,7 @@
 				</div>
 				<div class="item">
 					<div class="inner">
-						<div class="stars">
-							<span></span>
-							<span></span>
-							<span></span>
-							<span class="active"></span>
-							<span class="active"></span>
-						</div>
+						<div class="stars"></div>
 						<h5>“My go-tos”</h5>
 						<p>The day cream and eye cream have been my go-tos and I can honestly say they are part of one of the most advanced skin care systems out there.</p>
 						<div>—  Tina</div>
@@ -314,13 +308,7 @@
 				</div>
 				<div class="item">
 					<div class="inner">
-						<div class="stars">
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
+						<div class="stars"></div>
 						<h5>“Amazing”</h5>
 						<p>My skin was amazing — it felt like it had gone through a transformation after just four weeks!</p>
 						<div>—  Kelly</div>
@@ -328,13 +316,7 @@
 				</div>
 				<div class="item">
 					<div class="inner">
-						<div class="stars">
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
-							<span class="active"></span>
-						</div>
+						<div class="stars"></div>
 						<h5>“I’m hooked”</h5>
 						<p>I've used the day cream for six months. It sits perfectly under my makeup. Other people have commented on my skin and how well I look. When that happens at 48, you listen. I’m hooked!</p>
 						<div>—  Amy</div>
@@ -417,7 +399,8 @@
 			<div class="doctors">
 				<div class="item animation anim-left">
 					<div class="avatar">
-						<img src="img/lilliana.jpg" alt="">
+						<img src="img/lilliana.jpg" alt="" class="hide-mobile">
+						<img src="img/lilliana_mob.jpg" alt="" class="show-mobile" hidden>
 					</div>
 					<div class="info">
 						<h3>Dr. Lilliana Ramirez Garcia, M.D.</h3>
@@ -428,7 +411,8 @@
 
 				<div class="item animation anim-right">
 					<div class="avatar">
-						<img src="img/anthony.jpg" alt="">
+						<img src="img/anthony.jpg" alt="" class="hide-mobile">
+						<img src="img/anthony_mob.jpg" alt="" class="show-mobile" hidden>
 					</div>
 					<div class="info">
 						<h3>Dr. Anthony Puopolo, M.D.</h3>

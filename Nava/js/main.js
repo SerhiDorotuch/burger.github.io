@@ -56,6 +56,43 @@ $('.natural-slider').slick({
 	]
 });
 
+$('.slider-face .slider-wrap ul').slick({
+	infinite: true,
+	slidesToShow: 2,
+	slidesToScroll: 2,
+	arrows: true
+});
+
+function slickPortfolio() {
+	if ($(window).width() < 1200) {
+		$('.portfolio').not('.slick-initialized').slick({
+			infinite: true,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			arrows: false,
+			dots: false,
+			autoplay: true,
+  			autoplaySpeed: 2000,
+  			responsive: [
+  				{
+				    breakpoint: 500,
+				    settings: {
+				        slidesToShow: 3,
+				        slidesToScroll: 1,
+				    }
+			    },
+  			]
+		});
+	} else {
+		$('.portfolio.slick-initialized').slick('unslick');
+	}	
+}
+slickPortfolio();
+
+$(window).resize(function() {
+	slickPortfolio();
+});
+
 /* MOBILE MENU
 ---------------------------------------------------- */
 function MobileMenu() {
@@ -65,6 +102,16 @@ function MobileMenu() {
 	btnNav.addEventListener('click', function() {
 		nav.classList.toggle('active');
 		this.classList.toggle('active');
+	});
+
+	nav.querySelectorAll('a').forEach(link => {
+		link.addEventListener('click', (e) => {
+			if (e.target.querySelector('i') != null) {
+				e.target.parentElement.classList.toggle('active')
+			}
+
+			return false;
+		});
 	});
 }
 
@@ -125,3 +172,33 @@ function animationScrollPage() {
 }
 
 animationScrollPage();
+
+/* DROP DOWN
+---------------------------------------------------- */
+function dropDown() {
+	let btnDrop = document.querySelectorAll('.drop-down .view');
+
+	for (var i = 0; i < btnDrop.length; i++) {
+		btnDrop[i].addEventListener('click', openDrop);
+	}
+
+	function openDrop(e) {
+		let parent = this.closest('.drop-down');
+		let view = this.querySelector('span');
+		let drop = this.nextElementSibling;
+		let li = drop.querySelectorAll('li');
+
+		drop.classList.toggle('active');
+		parent.classList.toggle('selected');
+
+		for (var i = 0; i < li.length; i++) {
+			li[i].addEventListener('click', function(){
+				view.textContent = this.textContent;
+				drop.classList.remove('active');
+				parent.classList.remove('selected');
+			});
+		}
+	}
+}
+
+dropDown();
