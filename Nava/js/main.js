@@ -60,7 +60,17 @@ $('.slider-face .slider-wrap ul').slick({
 	infinite: true,
 	slidesToShow: 2,
 	slidesToScroll: 2,
-	arrows: true
+	arrows: true,
+	responsive: [
+		{
+		    breakpoint: 991,
+		    settings: {
+		        arrows: false,
+		        autoplay: true,
+		        autoplaySpeed: 2000
+		    }
+    	},
+	]
 });
 
 function slickPortfolio() {
@@ -83,6 +93,8 @@ function slickPortfolio() {
 			    },
   			]
 		});
+
+		$('.portfolio.not-slick').slick('unslick');
 	} else {
 		$('.portfolio.slick-initialized').slick('unslick');
 	}	
