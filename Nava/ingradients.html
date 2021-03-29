@@ -28,19 +28,52 @@
 							<a href="#">Treatments <i class="arr"></i></a>
 							<div class="sub-nav">
 								<ul>
-									<li><a href="#">Anti Aging <i class="arr"></i></a></li>
-									<li><a href="#">Acne <i class="arr"></i></a></li>
-									<li><a href="#">Rosacea <i class="arr"></i></a></li>
-									<li><a href="#">Hyperpigmentation <i class="arr"></i></a></li>
-									<li><a href="#">Melasma <i class="arr"></i></a></li>
-								</ul>
-
-								<div class="nav-inner">
-									<img src="img/nav-image.jpg" alt="">
-									<h3>Prescription Rosacea Treatments</h3>
-									<p>Treatment and long term solution to control rosacea made with proven, prescription only ingredients.</p>
-									<a href="#" class="btn-void">Find out more</a>
-								</div>
+									<li>
+										<a href="#">Anti Aging <i class="arr"></i></a>
+										<div class="sub-nav nav-info">
+											<img src="img/nav-image.jpg" alt="">
+											<h3>Prescription Rosacea Treatments</h3>
+											<p>Treatment and long term solution to control rosacea made with proven, prescription only ingredients.</p>
+											<a href="#" class="btn-void">Find out more</a>
+										</div>
+									</li>
+									<li>
+										<a href="#">Acne <i class="arr"></i></a>
+										<div class="sub-nav nav-info">
+											<img src="img/nav-image.jpg" alt="">
+											<h3>2</h3>
+											<p>Treatment and long term solution to control rosacea made with proven, prescription only ingredients.</p>
+											<a href="#" class="btn-void">Find out more</a>
+										</div>
+									</li>
+									<li>
+										<a href="#">Rosacea <i class="arr"></i></a>
+										<div class="sub-nav nav-info">
+											<img src="img/nav-image.jpg" alt="">
+											<h3>3</h3>
+											<p>Treatment and long term solution to control rosacea made with proven, prescription only ingredients.</p>
+											<a href="#" class="btn-void">Find out more</a>
+										</div>
+									</li>
+									<li>
+										<a href="#">Hyperpigmentation <i class="arr"></i></a>
+										<div class="sub-nav nav-info">
+											<img src="img/nav-image.jpg" alt="">
+											<h3>4</h3>
+											<p>Treatment and long term solution to control rosacea made with proven, prescription only ingredients.</p>
+											<a href="#" class="btn-void">Find out more</a>
+										</div>
+									</li>
+									<li>
+										<a href="#">Melasma <i class="arr"></i></a>
+										<div class="sub-nav nav-info">
+											<img src="img/nav-image.jpg" alt="">
+											<h3>5</h3>
+											<p>Treatment and long term solution to control rosacea made with proven, prescription only ingredients.</p>
+											<a href="#" class="btn-void">Find out more</a>
+										</div>
+									</li>
+								</ul>								
 							</div>
 						</li>
 						<li><a href="#">Ingredients</a></li>
@@ -50,7 +83,7 @@
 					</ul>
 				</nav>
 
-				<button class="btn-nav show-iphone" hidden>
+				<button class="btn-nav" hidden>
 					<span></span><span></span>
 				</button>
 			</div>
@@ -71,20 +104,20 @@
 	<!-- PORTFOLIO -->
 	<div class="ingradient-portfolio">
 		<div class="center">
-			<div class="wrap">
+			<div class="wrap tabs">
 				<div class="group-title">
 					<div class="icon"></div>
 					<h2>Ingredients You Can Trust</h2>
 					<p class="subtotal animation anim-scale">Personalized Treatments Based On Your Unique Skin Concerns</p>
 				</div>			
 
-				<ul class="controls hide-ipade">
-					<li class="active"><a href="#">All Ingredients</a></li>
-					<li><a href="#">Anti-Aging</a></li>
-					<li><a href="#">Acne</a></li>
-					<li><a href="#">Rosacea</a></li>
-					<li><a href="#">Hyperpigmentation</a></li>
-					<li><a href="#">Melasma</a></li>
+				<ul class="controls control-tab hide-ipade">
+					<li data-tab="tab-1" class="active"><a href="#">All Ingredients</a></li>
+					<li data-tab="tab-2"><a href="#">Anti-Aging</a></li>
+					<li data-tab="tab-3"><a href="#">Acne</a></li>
+					<li data-tab="tab-4"><a href="#">Rosacea</a></li>
+					<li data-tab="tab-5"><a href="#">Hyperpigmentation</a></li>
+					<li data-tab="tab-6"><a href="#">Melasma</a></li>
 				</ul>
 
 				<div class="drop-down show-ipade" hidden>
@@ -98,7 +131,422 @@
 					</ul>
 				</div>
 
-				<div class="portfolio-wrap">
+				<div class="portfolio-wrap content-tab tab-1 active">
+					<div class="portfolio-item animation anim-scale">
+						<img src="img/age-3.jpg" alt="">
+						<div class="inner">
+							<h3>Azelaic Acid</h3>
+							<p>A naturally occuring acid that fights inflammation to reduce redness and excessive flushing.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-left">
+						<img src="img/age-1.jpg" alt="">
+						<div class="inner">
+							<h3>Tretinoin</h3>
+							<p>A form of synthetic Vitamin A used to reduce  the look of fine lines, wrinkles, and discoloration.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-right">
+						<img src="img/age-2.jpg" alt="">
+						<div class="inner">
+							<h3>Hydroquinone</h3>
+							<p>A lightening agent used to lessen the look of dark spots, melasma, and other forms of hyperpigmentation.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-left">
+						<img src="img/age-1.jpg" alt="">
+						<div class="inner">
+							<h3>Clindamycin</h3>
+							<p>An antibiotic that helps stop the growth of bacteria</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-scale">
+						<img src="img/age-3.jpg" alt="">
+						<div class="inner">
+							<h3>Niacinamide</h3>
+							<p>A Vitamin B-3 derivative with natural anti-inflammatory properties.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-right">
+						<img src="img/age-2.jpg" alt="">
+						<div class="inner">
+							<h3>Tranexamic Acid</h3>
+							<p>An amino acid derivative that inhibits pigment producing cells and inflammation following sun exposure.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-left">
+						<img src="img/age-1.jpg" alt="">
+						<div class="inner">
+							<h3>Kojic Acid</h3>
+							<p>A fungi-derived ingredient that prevent the formation of tyrosine, an amino acid that triggers melanin production.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-scale">
+						<img src="img/age-3.jpg" alt="">
+						<div class="inner">
+							<h3>Metronidazole</h3>
+							<p>A topical antibiotic that visibly “calms” skin to reduce redness.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-right">
+						<img src="img/age-2.jpg" alt="">
+						<div class="inner">
+							<h3>Ketotifen</h3>
+							<p>An antihistamine used to reduce redness.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="portfolio-wrap content-tab tab-2">
+					<div class="portfolio-item animation anim-right">
+						<img src="img/age-2.jpg" alt="">
+						<div class="inner">
+							<h3>Hydroquinone</h3>
+							<p>A lightening agent used to lessen the look of dark spots, melasma, and other forms of hyperpigmentation.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-left">
+						<img src="img/age-1.jpg" alt="">
+						<div class="inner">
+							<h3>Tretinoin</h3>
+							<p>A form of synthetic Vitamin A used to reduce  the look of fine lines, wrinkles, and discoloration.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-scale">
+						<img src="img/age-3.jpg" alt="">
+						<div class="inner">
+							<h3>Azelaic Acid</h3>
+							<p>A naturally occuring acid that fights inflammation to reduce redness and excessive flushing.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-left">
+						<img src="img/age-1.jpg" alt="">
+						<div class="inner">
+							<h3>Clindamycin</h3>
+							<p>An antibiotic that helps stop the growth of bacteria</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-scale">
+						<img src="img/age-3.jpg" alt="">
+						<div class="inner">
+							<h3>Niacinamide</h3>
+							<p>A Vitamin B-3 derivative with natural anti-inflammatory properties.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-right">
+						<img src="img/age-2.jpg" alt="">
+						<div class="inner">
+							<h3>Tranexamic Acid</h3>
+							<p>An amino acid derivative that inhibits pigment producing cells and inflammation following sun exposure.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-left">
+						<img src="img/age-1.jpg" alt="">
+						<div class="inner">
+							<h3>Kojic Acid</h3>
+							<p>A fungi-derived ingredient that prevent the formation of tyrosine, an amino acid that triggers melanin production.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-scale">
+						<img src="img/age-3.jpg" alt="">
+						<div class="inner">
+							<h3>Metronidazole</h3>
+							<p>A topical antibiotic that visibly “calms” skin to reduce redness.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-right">
+						<img src="img/age-2.jpg" alt="">
+						<div class="inner">
+							<h3>Ketotifen</h3>
+							<p>An antihistamine used to reduce redness.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="portfolio-wrap content-tab tab-3">
+					<div class="portfolio-item animation anim-scale">
+						<img src="img/age-3.jpg" alt="">
+						<div class="inner">
+							<h3>Azelaic Acid</h3>
+							<p>A naturally occuring acid that fights inflammation to reduce redness and excessive flushing.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-right">
+						<img src="img/age-2.jpg" alt="">
+						<div class="inner">
+							<h3>Hydroquinone</h3>
+							<p>A lightening agent used to lessen the look of dark spots, melasma, and other forms of hyperpigmentation.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-left">
+						<img src="img/age-1.jpg" alt="">
+						<div class="inner">
+							<h3>Tretinoin</h3>
+							<p>A form of synthetic Vitamin A used to reduce  the look of fine lines, wrinkles, and discoloration.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-left">
+						<img src="img/age-1.jpg" alt="">
+						<div class="inner">
+							<h3>Clindamycin</h3>
+							<p>An antibiotic that helps stop the growth of bacteria</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-scale">
+						<img src="img/age-3.jpg" alt="">
+						<div class="inner">
+							<h3>Niacinamide</h3>
+							<p>A Vitamin B-3 derivative with natural anti-inflammatory properties.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-right">
+						<img src="img/age-2.jpg" alt="">
+						<div class="inner">
+							<h3>Tranexamic Acid</h3>
+							<p>An amino acid derivative that inhibits pigment producing cells and inflammation following sun exposure.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-left">
+						<img src="img/age-1.jpg" alt="">
+						<div class="inner">
+							<h3>Kojic Acid</h3>
+							<p>A fungi-derived ingredient that prevent the formation of tyrosine, an amino acid that triggers melanin production.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-scale">
+						<img src="img/age-3.jpg" alt="">
+						<div class="inner">
+							<h3>Metronidazole</h3>
+							<p>A topical antibiotic that visibly “calms” skin to reduce redness.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-right">
+						<img src="img/age-2.jpg" alt="">
+						<div class="inner">
+							<h3>Ketotifen</h3>
+							<p>An antihistamine used to reduce redness.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="portfolio-wrap content-tab tab-4">
+					<div class="portfolio-item animation anim-left">
+						<img src="img/age-1.jpg" alt="">
+						<div class="inner">
+							<h3>Tretinoin</h3>
+							<p>A form of synthetic Vitamin A used to reduce  the look of fine lines, wrinkles, and discoloration.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-scale">
+						<img src="img/age-3.jpg" alt="">
+						<div class="inner">
+							<h3>Azelaic Acid</h3>
+							<p>A naturally occuring acid that fights inflammation to reduce redness and excessive flushing.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-right">
+						<img src="img/age-2.jpg" alt="">
+						<div class="inner">
+							<h3>Hydroquinone</h3>
+							<p>A lightening agent used to lessen the look of dark spots, melasma, and other forms of hyperpigmentation.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-left">
+						<img src="img/age-1.jpg" alt="">
+						<div class="inner">
+							<h3>Clindamycin</h3>
+							<p>An antibiotic that helps stop the growth of bacteria</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-scale">
+						<img src="img/age-3.jpg" alt="">
+						<div class="inner">
+							<h3>Niacinamide</h3>
+							<p>A Vitamin B-3 derivative with natural anti-inflammatory properties.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-right">
+						<img src="img/age-2.jpg" alt="">
+						<div class="inner">
+							<h3>Tranexamic Acid</h3>
+							<p>An amino acid derivative that inhibits pigment producing cells and inflammation following sun exposure.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-left">
+						<img src="img/age-1.jpg" alt="">
+						<div class="inner">
+							<h3>Kojic Acid</h3>
+							<p>A fungi-derived ingredient that prevent the formation of tyrosine, an amino acid that triggers melanin production.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-scale">
+						<img src="img/age-3.jpg" alt="">
+						<div class="inner">
+							<h3>Metronidazole</h3>
+							<p>A topical antibiotic that visibly “calms” skin to reduce redness.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-right">
+						<img src="img/age-2.jpg" alt="">
+						<div class="inner">
+							<h3>Ketotifen</h3>
+							<p>An antihistamine used to reduce redness.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="portfolio-wrap content-tab tab-5">
+					<div class="portfolio-item animation anim-left">
+						<img src="img/age-1.jpg" alt="">
+						<div class="inner">
+							<h3>Tretinoin</h3>
+							<p>A form of synthetic Vitamin A used to reduce  the look of fine lines, wrinkles, and discoloration.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-scale">
+						<img src="img/age-3.jpg" alt="">
+						<div class="inner">
+							<h3>Azelaic Acid</h3>
+							<p>A naturally occuring acid that fights inflammation to reduce redness and excessive flushing.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-right">
+						<img src="img/age-2.jpg" alt="">
+						<div class="inner">
+							<h3>Hydroquinone</h3>
+							<p>A lightening agent used to lessen the look of dark spots, melasma, and other forms of hyperpigmentation.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-left">
+						<img src="img/age-1.jpg" alt="">
+						<div class="inner">
+							<h3>Clindamycin</h3>
+							<p>An antibiotic that helps stop the growth of bacteria</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-scale">
+						<img src="img/age-3.jpg" alt="">
+						<div class="inner">
+							<h3>Niacinamide</h3>
+							<p>A Vitamin B-3 derivative with natural anti-inflammatory properties.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-right">
+						<img src="img/age-2.jpg" alt="">
+						<div class="inner">
+							<h3>Tranexamic Acid</h3>
+							<p>An amino acid derivative that inhibits pigment producing cells and inflammation following sun exposure.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-left">
+						<img src="img/age-1.jpg" alt="">
+						<div class="inner">
+							<h3>Kojic Acid</h3>
+							<p>A fungi-derived ingredient that prevent the formation of tyrosine, an amino acid that triggers melanin production.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-scale">
+						<img src="img/age-3.jpg" alt="">
+						<div class="inner">
+							<h3>Metronidazole</h3>
+							<p>A topical antibiotic that visibly “calms” skin to reduce redness.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+
+					<div class="portfolio-item animation anim-right">
+						<img src="img/age-2.jpg" alt="">
+						<div class="inner">
+							<h3>Ketotifen</h3>
+							<p>An antihistamine used to reduce redness.</p>
+							<a href="#" class="btn-radius hover">Learn More</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="portfolio-wrap content-tab tab-6">
 					<div class="portfolio-item animation anim-left">
 						<img src="img/age-1.jpg" alt="">
 						<div class="inner">
