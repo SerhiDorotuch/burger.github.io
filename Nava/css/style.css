@@ -3097,6 +3097,151 @@ body.scrolling .header {
 	display: flex;
 }
 
+/* PAGE SLECT 
+---------------------------------------------------- */
+body.scrolling.page-select {padding-top: 0;}
+.page-select {
+	padding-bottom: 75px;
+	background: #f9f9f9;
+}
+.page-select .header {
+	background: #fff;
+	padding: 10px 0;
+	border-bottom: none;
+	position: static !important;
+	transform: none !important;
+}
+.page-select .header .center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.page-select .logo {
+	width: 177px;
+	height: 42px;
+	display: inline-block;
+	background: url(../img/logo.svg) no-repeat center;
+	background-size: 177px 42px;
+}
+.btn-back {
+	position: absolute;
+	top: 50%;
+	left: 15px;
+	transform: translateY(-50%);
+	color: #dfdfdf;
+	font: bold 16px/31px 'Quincy CF', sans-serif;
+	display: flex;
+	align-items: center;
+}
+.btn-back:before {
+	content: '';
+	display: block;
+	width: 20px;
+	height: 17px;
+	background: url(../img/ic-arr-left.png) no-repeat;
+	margin-right: 5px;
+}
+
+.list-select {padding-top: 75px;}
+.list-select h2 {
+	font: bold 36px/31px 'Quincy CF', sans-serif;
+	color: #295365;
+}
+.list-select .subtitle {
+	font: 16px 'Quincy CF', sans-serif;
+	color: #295365;
+	margin-top: 10px;
+}
+.list-select ul {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+	max-width: 870px;
+}
+.list-select ul li {
+	width: 50%;
+	padding: 0 15px;
+	margin-bottom: 30px;
+}
+.list-select ul li .inner {
+	background: #fff url(../img/arr-slick-opacity.svg) no-repeat right 10px center;
+	padding: 13px 26px 13px 13px;
+	border: 1px solid #a7a7a7;
+	outline: 1px solid transparent;
+	display: flex;
+	align-items: flex-start;
+	transition: all 0.3s ease;
+}
+.list-select ul li .inner:hover {
+	border: 1px solid #295265;
+	outline: 1px solid #295265;
+	background-color: #e3d8d0;
+	background: #e3d8d0 url(../img/arr-slick-opacity_hover.svg) no-repeat right 10px center;
+}
+.list-select ul li .info {
+	padding-left: 25px;
+}
+.list-select ul li h3 {
+	font-size: 24px;
+	text-align: left;
+	color: #295265;
+}
+.list-select ul li p {
+	font-size: 14px;
+	line-height: 18px;
+	color: #7f7f7f;
+}
+.list-select ul li .small {
+	font-size: 12px;
+	line-height: 13px;
+	color: #a7a7a7;
+	margin-top: 5px;
+}
+.list-select ul li .small span {
+	color: #767676;
+}
+
+.select-doctor {
+	max-width: 570px;
+	margin: 100px auto 0 auto;
+	background: #fff;
+	border-radius: 10px;
+	padding: 15px 50px;
+	display: flex;
+	align-items: center;
+}
+.select-doctor img {
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+}
+.select-doctor .info {padding-left: 25px;}
+.select-doctor .info h3 {
+	color: #295365;
+	font: bold 30px/31px 'Quincy CF', sans-serif;
+}
+.select-doctor .info p {
+	font-size: 18px;
+	line-height: 15px;
+	color: #295365;
+	margin-top: 8px;
+}
+.select-doctor .info p.small {
+	font-size: 12px;
+	line-height: 18px;
+	color: #9f9f9f;
+}
+
+.select-copy {
+	margin-top: 10px;
+	font-size: 12px;
+	line-height: 18px;
+	color: #bababa;
+}
+
 /* ---------------------------------------------- */
 /*               MEDIA QUERI                      */
 /* ---------------------------------------------- */
@@ -3310,6 +3455,7 @@ body.scrolling .header {
 
 @media screen and (max-width: 1100px) {
 	body.scrolling {padding-top: 102px;}
+	body.scrolling.page-select {padding-top: 0;}
 
 	/* header */
 	.head-main {
@@ -3690,6 +3836,28 @@ body.scrolling .header {
 		min-height: 60px;
 		padding: 0 15px;
 	}
+
+	/* page select */
+	.list-select {padding-top: 35px;}
+	.list-select ul {
+		max-width: 100%;
+		flex-direction: column;
+	}
+	.list-select ul li {
+		padding: 0;
+		width: 100%;
+		margin-bottom: 13px;
+	}
+	.select-doctor {
+	    max-width: 100%;
+	    margin: 40px auto 0 auto;
+	    background: #295265;
+	    border-radius: 10px;
+	    padding: 15px;
+	}
+	.select-doctor .info h3 {color: #fff;}
+	.select-doctor .info p {color: #ebebeb;}
+	.select-doctor .info p.small {color: #ebebeb;}
 }
 
 @media screen and (max-width: 768px) {
@@ -4571,6 +4739,9 @@ body.scrolling .header {
 	.slider-face .slider-wrap:before {
 	    height: 350px;
 	}
+
+	/* page select */
+	.btn-back span {display: none;}
 }
 
 @media screen and (max-width: 650px) { 

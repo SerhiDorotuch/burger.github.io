@@ -189,7 +189,7 @@ function MobileMenu() {
 	});
 }
 
-MobileMenu();	
+if (document.querySelector('.btn-nav')) MobileMenu();	
 
 /* ANIMATION SCROLL PAGE
 ---------------------------------------------------- */
