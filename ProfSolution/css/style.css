@@ -1136,6 +1136,7 @@ img {
 }
 
 @media screen and (max-width: 900px) {
+	#fullpage {transform: none !important;}
 	.fp-responsive .fp-section,
 	.fp-responsive .fp-slide,
 	.fp-responsive .fp-tableCell{
@@ -1143,6 +1144,9 @@ img {
 	}
 	.fp-scrollable {height: auto !important;}
 	.iScrollLoneScrollbar {display: none !important;}
+
+	/* header */
+	.nav {padding-top: 0;}
 
 	/* OFFERS */
 	.offers {
