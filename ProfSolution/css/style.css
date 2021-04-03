@@ -1036,6 +1036,7 @@ img {
 	opacity: 1;
 }
 
+
 /* ---------------------------------------------- */
 /*               MEDIA QUERI                      */
 /* ---------------------------------------------- */
@@ -1136,7 +1137,10 @@ img {
 }
 
 @media screen and (max-width: 900px) {
-	#fullpage {transform: none !important;}
+	#fullpage {
+		transform: none !important;
+		overflow-x: hidden !important;
+	}
 	.fp-responsive .fp-section,
 	.fp-responsive .fp-slide,
 	.fp-responsive .fp-tableCell{
@@ -1146,7 +1150,10 @@ img {
 	.iScrollLoneScrollbar {display: none !important;}
 
 	/* header */
-	.nav {padding-top: 0;}
+	.nav {
+		padding-top: 0;
+		height: 100vh;
+	}
 
 	/* OFFERS */
 	.offers {
