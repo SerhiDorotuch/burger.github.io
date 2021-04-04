@@ -489,7 +489,25 @@ let slider = new Slider({
 /* PAGE SCROLLL
 ---------------------------------------------------- */
 new fullpage('#fullpage', {
-    scrollOverflow: true,
     navigation: true,
-    responsiveWidth: 900
+    normalScrollElements: '.section-6',
+    responsiveWidth: 900,
+    onLeave: function(origin, destination, direction){
+        if (destination.item.classList.contains('section-portfolio')) {
+            let scrollElem = document.querySelector('.section-portfolio .fp-tableCell');
+
+            scrollElem.addEventListener('scroll', function(e) {
+                let metrix = scrollElem.getBoundingClientRect();
+
+                if (this.scrollTop <= 0) {
+                    console.log('up');
+                    fullpage_api.moveTo(6);
+                }
+
+                if ((this.scrollHeight - this.scrollTop === this.clientHeight) && direction == "down") {
+                    fullpage_api.moveSectionDown();
+                } 
+            });
+        }
+    }
 });

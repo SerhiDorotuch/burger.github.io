@@ -95,6 +95,8 @@ img {
     height: auto;
 }
 
+.tx-center {text-align: center;}
+
 .flex {display: flex;}
 
 .flex-box {
@@ -383,7 +385,9 @@ img {
 .offers {
 	display: flex;
 	justify-content: space-between;
-	padding: 100px 0;
+	padding: 0 0 0 0;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 .offers .item {
 	position: relative;
@@ -989,6 +993,7 @@ img {
 .copyright {
 	padding-top: 25px;
 	text-align: center;
+	padding-bottom: 60px;
 }
 .copyright span {
 	color: #8B8B8A;
@@ -1003,7 +1008,7 @@ img {
 
 /*  ANIMATION 
 ------------------------------------------------- */
-/*.anim-left {
+.anim-left {
     opacity: 0;
     transform: translateX(-100%);
     transition: transform 2s cubic-bezier(.19,1,.22,1), opacity 1.9s;
@@ -1043,14 +1048,35 @@ img {
 	transform: none;
 	opacity: 1;
 }
-*/
 
+.section-0 .fp-scroller {height: 100%;}
+.main .center {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.offers {
+	padding: 0 0 0 0;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.section-6 {
+	z-index: 10;
+	background: #fff;
+}
+.section-6 .fp-tableCell {
+	overflow-y: scroll;
+    display: block;
+}
+.section-6 .fp-tableCell::-webkit-scrollbar {width: 5px;}
+.section-6 .fp-tableCell::-webkit-scrollbar-thumb {background: #ccc;}
 
 
 /* ---------------------------------------------- */
 /*               MEDIA QUERI                      */
 /* ---------------------------------------------- */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1366px) {
 	/* OFFERS */
 	.offers .item {
 		width: 450px;
@@ -1165,15 +1191,41 @@ img {
 	}
 
 	/* header */
+	.header {padding: 20px 0;}
+
+	.logo {
+		width: 140px;
+		height: 24px;
+		background-size: cover;
+	}
+
+	.menu.active {
+		z-index: 99999;
+		background: url(../img/close-white.svg) no-repeat center;
+	}
 	.nav {
-		padding-top: 0;
+		max-width: 100%;
+		padding-left: 20px;
 		height: 100vh;
+		padding-top: 0;
+	}
+	.nav-head {
+		padding: 20px 0;
+		left: 20px;
+		right: 20px;
+	}
+	.nav ul li + li {margin-top: 20px;}
+	.nav ul li:last-child {padding-top: 20px;}
+	.nav ul li a {
+		font-size: 20px;
+		line-height: 20px;
 	}
 
 	/* OFFERS */
 	.offers {
 		flex-direction: column;
 		align-items: center;
+		padding: 100px 0;
 	}
 
 	.offers .item {
@@ -1250,6 +1302,9 @@ img {
 	/* VACANCIES */
 	.vacancies {background: #fff;}
 
+	/* PORTFOLIO */
+	.portfolio {margin-bottom: 0;}
+
 	/* CONTACT */
 	.contact {
 		padding-bottom: 100px;
@@ -1271,54 +1326,15 @@ img {
 	.contact {
 		margin-top: 150px;
 	}
-}
 
-.section-0 .fp-scroller {height: 100%;}
-.main .center {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
+	/* FOOTER */
+	.copyright {padding-bottom: 0;}
 }
-.offers {
-	padding: 0 0 0 0;
-	margin-top: auto;
-	margin-bottom: auto;
-}
-
 
 @media screen and (max-width: 768px) {
 	.center {
 		padding-left: 20px;
 		padding-right: 20px;
-	}
-
-	/* HEADER */
-	.header {padding: 20px 0;}
-
-	.logo {
-		width: 140px;
-		height: 24px;
-		background-size: cover;
-	}
-
-	.menu.active {
-		z-index: 99999;
-		background: url(../img/close-white.svg) no-repeat center;
-	}
-	.nav {
-		max-width: 100%;
-		padding-left: 20px;
-	}
-	.nav-head {
-		padding: 20px 0;
-		left: 20px;
-		right: 20px;
-	}
-	.nav ul li + li {margin-top: 20px;}
-	.nav ul li:last-child {padding-top: 20px;}
-	.nav ul li a {
-		font-size: 20px;
-		line-height: 20px;
 	}
 
 	/* SERVICES */

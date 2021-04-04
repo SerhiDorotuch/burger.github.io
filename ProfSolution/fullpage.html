@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+
+	
+	<link rel="stylesheet" href="css/fullpage.css">
+
+	
+</head>
+<body>
+
+	<ul id="menu">
+		<li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
+		<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+		<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+		<li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
+		<li data-menuanchor="5thpage"><a href="#5thpage">dfdfdf</a></li>
+	</ul>
+
+	<ul class="preview-extensions-menu" hidden>
+		<li class="preview-more-extensions"><a href="https://alvarotrigo.com/fullPage/extensions/">More extensions</a></li><!--
+		--><li class="preview-buy-extension"><a href="https://gum.co/fullpageScrollHorizontally">Download extension</a></li>
+	</ul>
+
+	<div id="myContainer">
+
+		<div class="section">
+			<div class="slide">
+				<di class="intro">
+					<h1>Scroll Horizontally</h1>
+					<p>Use `scrollHorizontally: true` and enable the mouse wheel horizontal scroll for slides.</p>
+				</di>
+			</div>
+			<div class="slide"><h1>Slide 1.2</h1></div>
+			<div class="slide"><h1>Slide 1.3</h1></div>
+		</div>
+		<div class="section"><h1>Section 2</h1></div>
+		<div class="section">
+			<div class="slide"><h1>Section 3</h1></div>
+			<div class="slide"><h1>Slide 3.2</h1></div>
+			<div class="slide"><h1>Slide 3.3</h1></div>
+			<div class="slide"><h1>Slide 3.4</h1></div>
+		</div>
+		<div class="section"><h1>Section 4</h1></div>
+		<div class="section"><h1>Section 4</h1></div>
+	</div>
+
+	<input type="hidden" id="_4" value="3" />
+
+<script type="text/javascript" src="https://alvarotrigo.com/fullPage/fullpage.scrollHorizontally.limited.min.js"></script>
+<!-- END WARNING-->
+
+<script type="text/javascript" src="https://alvarotrigo.com/fullPage/fullpage.extensions.min.js"></script>
+
+<script type="text/javascript">
+	new fullpage('#myContainer', {
+		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage'],
+		menu: '#menu',
+		slidesNavigation: true,
+		scrollHorizontally: true,
+	});
+</script>
+</body>
+</html>
