@@ -1273,14 +1273,18 @@ img {
 	}
 }
 
-@media screen and (max-height: 768px) {
-	.section-0 .fp-scroller {height: 100%;}
-	.offers {padding: 30px 0 0 0;}
-	.offers .item {
-	    width: 430px;
-	    min-height: 450px;
-	}
+.section-0 .fp-scroller {height: 100%;}
+.main .center {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }
+.offers {
+	padding: 0 0 0 0;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
 
 @media screen and (max-width: 768px) {
 	.center {
