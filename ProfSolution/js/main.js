@@ -78,6 +78,29 @@ function showSection(count) {
 
 let show1 = new showSection(4);
 
+/*  REQUIRED INPUT 
+------------------------------------------------- */
+function focus() {
+    let input = document.querySelectorAll('input');
+
+    input.forEach(input => {
+      input.addEventListener('focus', function() {
+        this.parentElement.classList.add('focus');
+      });
+
+      input.addEventListener('blur', function() {
+            if (this.value == '') {
+                setTimeout(function(btn) {
+                    btn.parentElement.classList.remove('focus');
+            }, 100 ,this);  
+        } 
+         
+      });
+    });
+}
+focus();
+
+
 /*  SCROLL TOP
 ------------------------------------------------- */
 window.onload = function() {
@@ -465,49 +488,229 @@ function Slider(options) {
     }
 }
 
-let slider = new Slider({
-    elem: '.slider',
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    dots: false,
-    swipe: true,
-    speed: 300,
-    autoplay: false,
-    autoplaySpeed: 3000,
-    responsive: [
-        {
-            breakpoint: 1024,
-            slidesToShow: 3,
-        },
-        {
-            breakpoint: 768,
-            slidesToShow: 2,
-        }
-    ]
-});
+if (document.querySelectorAll('.slider').length) {
+    let slider = new Slider({
+        elem: '.slider',
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        swipe: true,
+        speed: 300,
+        autoplay: false,
+        autoplaySpeed: 3000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                slidesToShow: 3,
+            },
+            {
+                breakpoint: 768,
+                slidesToShow: 2,
+            }
+        ]
+    });
+}
 
-/* PAGE SCROLLL
----------------------------------------------------- */
-new fullpage('#fullpage', {
-    navigation: true,
-    normalScrollElements: '.section-6',
-    responsiveWidth: 900,
-    onLeave: function(origin, destination, direction){
-        if (destination.item.classList.contains('section-portfolio')) {
-            let scrollElem = document.querySelector('.section-portfolio .fp-tableCell');
 
-            scrollElem.addEventListener('scroll', function(e) {
-                let metrix = scrollElem.getBoundingClientRect();
+/*  SCROLL PAGE 
+------------------------------------------------- */
+function scrollPage() {
 
-                if (this.scrollTop <= 0) {
-                    console.log('up');
-                    fullpage_api.moveTo(6);
+    let scrollPage = document.querySelector('.scroll-page');
+
+    let trackScroll = scrollPage.querySelector('.track-scroll');
+
+    let section = scrollPage.querySelectorAll('.section');
+
+    let container = scrollPage.querySelectorAll('.container');
+
+    let btn = document.querySelectorAll('.btn-scroll');
+
+    let dots;
+    let z = 0;
+
+    let count = 0;
+    let countDot = 0;
+
+    function scrollBtn() {
+
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].onclick = function(e) {
+                e.preventDefault();
+                count = 0;
+                countDot = 0;
+
+                for (let i = 0; i < dots.length; i++) {
+                    dots[i].classList.remove('active');
                 }
 
-                if ((this.scrollHeight - this.scrollTop === this.clientHeight) && direction == "down") {
-                    fullpage_api.moveSectionDown();
-                } 
-            });
+                dots[0].classList.add('active');
+
+                for (let i = 0; i < container.length; i++) {
+                    container[i].classList.remove('active');
+                
+                };
+
+                container[count].classList.add('active');
+
+                setTransform();
+            }
         }
     }
-});
+    scrollBtn();
+
+
+    /*  ADD DOTS 
+    ------------------------------------------------- */
+    function navDots() {
+        let navDots = document.createElement('div');
+
+        for (let i = 0; i < section.length; i++) {
+            scrollPage.appendChild(navDots);
+            navDots.classList.add('nav-dots');
+
+            let span = document.createElement('span');
+            navDots.appendChild(span);
+        }
+
+        dots = scrollPage.querySelectorAll('.nav-dots span');
+        dots[0].classList.add('active');
+
+    }
+    navDots();
+
+    /*  DOTS-CLICK 
+    ------------------------------------------------- */
+    function dotsClick() {
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].onclick = function() {
+                z = 0;
+
+                for (let i = 0; i < dots.length; i++) {
+                    dots[i].classList.remove('active');
+                }
+
+                dots[i].classList.add('active');
+
+                count = i;
+                countDot = i;
+
+                for (let i = 0; i < container.length; i++) {
+                    container[i].classList.remove('active');
+                
+                };
+
+                container[count].classList.add('active');
+
+                setTransform();
+            }
+        }
+    }
+    dotsClick();
+
+
+    /*  SET TRANSFORM 
+    ------------------------------------------------- */
+    function setTransform() {
+        trackScroll.style.transform = 'translateY(-' + 100 * count / section.length + '%)';
+    }
+
+    /*  SCROLL SECTION 
+    ------------------------------------------------- */
+    for (let i = 0; i < container.length; i++) {
+        container[i].addEventListener('wheel', ScrollSection);
+        container[0].classList.add('active');
+    };
+
+    function ScrollSection(e) {
+        z++;
+
+        if (z > 2) {
+            z = 0;
+
+            let num = parseInt(this.scrollHeight - this.scrollTop - this.clientHeight);
+
+            if (this.scrollHeight > this.clientHeight) {
+
+                if (this.scrollTop <= 0 && e.deltaY < 0) {
+                   document.addEventListener('wheel', transformScroll); 
+                }
+
+                if (num <= 0 && e.deltaY > 0) {
+                    document.addEventListener('wheel', transformScroll);
+                }
+
+            } else {
+                document.addEventListener('wheel', transformScroll); 
+            }
+        }
+
+    }
+
+    function transformScroll(e) {
+
+
+        document.removeEventListener('wheel', transformScroll);
+
+        if (e.deltaY > 0) {
+            dots[countDot].classList.remove('active');
+
+            count = count +1;
+            countDot = countDot +1;
+
+            if (count > section.length -1) {
+                count = section.length -1;
+                countDot = section.length -1;
+            }
+
+            dots[countDot].classList.add('active');
+
+            for (let i = 0; i < container.length; i++) {
+                container[i].classList.remove('active');
+                
+            };
+
+            container[count].classList.add('active');
+
+        } else {
+            dots[countDot].classList.remove('active');
+
+            count = count -1;
+            countDot = countDot -1;
+
+            if (count < 0) {
+                count = 0;
+                countDot = 0;
+            }
+
+            dots[countDot].classList.add('active');
+
+            for (let i = 0; i < container.length; i++) {
+                container[i].classList.remove('active');
+                
+            };
+
+            container[count].classList.add('active');
+        }
+
+        setTransform();
+    }
+
+    window.addEventListener('resize', deActive);
+
+    function deActive() {
+        if( window.innerWidth < 900 ){
+            for (let i = 0; i < container.length; i++) {
+                container[i].removeEventListener('wheel', ScrollSection);
+            }
+        } else {
+              for (let i = 0; i < container.length; i++) {
+                container[i].addEventListener('wheel', ScrollSection);
+            }
+        } 
+    }
+
+    deActive();
+}
+
+if (document.querySelector('.scroll-page')) scrollPage();

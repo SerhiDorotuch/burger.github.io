@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sofy</title>
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		@media screen and (max-width: 1120px) {
+			.banner {
+				height: auto !important;
+				font-size: 20px !important;
+				line-height: 30px !important;
+				white-space: nowrap;
+			}
+			.banner br {display: block !important;}
+			.banner .left {background-size: auto 100% !important;}
+			.banner .left img {
+				margin-bottom: -40px !important;
+				transform-origin: center;
+				transform: rotate(20deg);
+				max-width: 140px;
+			}
+			.banner .left, .banner .right {
+				width: 50% !important;
+				min-width: inherit !important;
+				padding: 20px 0;
+			}
+		}
+
+		@media screen and (max-width: 700px) {
+			.banner {
+				font-size: 15px !important;
+				line-height: 25px !important;
+			}
+			.banner br {display: block !important;}
+			.banner .left img {
+				max-width: 100px;
+			}
+		}
+	</style>
+</head>
+<body style="padding: 0; margin: 0;">
+
+<div class="banner" style="height: 70px; background: #59c2ad; color: #fff; overflow: hidden; display: flex; font: 27px 'Myriad Pro', sans-serif;">
+	<div class="left" style="display: flex; padding-right: 50px; align-items: center; min-width: 615px; background: url(img/bg-header.jpg) no-repeat right center;">
+		<img src="img/hat.png" alt="" style="margin-bottom: -45px;">
+		<span>CINCO DE MAYO<br style="display: none;"> SPECIAL</span>
+	</div>
+	<div class="right" style="background: #8bd4c6; padding-right: 20px; display: flex; align-items: center; width: 100%; padding-left: 12px;">
+		<span>Save up to 37% on all orders<br style="display: none;"> + Free Rush Shipping</span>
+		<img src="img/truck.png" alt="" style="margin-left: 10px;">
+	</div>
+</div>
+
+</body>
+</html>
